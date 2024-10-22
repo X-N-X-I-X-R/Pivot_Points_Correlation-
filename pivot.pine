@@ -65,12 +65,12 @@ if (show_high_pivots and is_unusual_volume_high and not na(pivot_high))
     
 
     if (show_high_labels) 
-        label.new(bar_index- 5, pivot_5_up, text="War Zone", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
-        label.new(bar_index- 5, pivot_5_up, text="Wait", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
-        label.new(bar_index- 5, pivot_20_up, text="Overbought", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
-        label.new(bar_index- 5, pivot_5_down, text="War Zone", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
-        label.new(bar_index- 5, pivot_5_down, text="Wait", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
-        label.new(bar_index- 5, pivot_20_down, text="Oversold", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
+        label.new(bar_index + 55, pivot_10_up, text="War Zone", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
+        label.new(bar_index + 55, pivot_5_up, text="Wait", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
+        label.new(bar_index + 55, pivot_20_up, text="Overbought", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
+        label.new(bar_index + 55, pivot_10_down, text="War Zone", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
+        label.new(bar_index + 55, pivot_5_down, text="Wait", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
+        label.new(bar_index + 55, pivot_20_down, text="Oversold", style=label.style_label_center, color=backgcolor, textcolor=labelColorH, size=size.small)
 
 
 
@@ -86,12 +86,12 @@ if (show_low_pivots and is_unusual_volume_low and not na(pivot_low))
 
 
     if (show_low_labels) 
-        label.new(bar_index- 5, low_10_up, text="War Zone", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
-        label.new(bar_index- 5, low_5_up, text="Wait", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
-        label.new(bar_index- 5, low_20_up, text="Overbought", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
-        label.new(bar_index- 5, low_10_down, text="War Zone", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
-        label.new(bar_index- 5, low_5_down, text="Wait", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
-        label.new(bar_index- 5, low_20_down, text="Oversold", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
+        label.new(bar_index+ 55, low_10_up, text="War Zone", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
+        label.new(bar_index+ 55, low_5_up, text="Wait", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
+        label.new(bar_index+ 55, low_20_up, text="Overbought", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
+        label.new(bar_index+ 55, low_10_down, text="War Zone", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
+        label.new(bar_index+ 55, low_5_down, text="Wait", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
+        label.new(bar_index+ 55, low_20_down, text="Oversold", style=label.style_label_center, color=backgcolor, textcolor=labelColorL, size=size.small)
 
 
 // Highlight pivot high and low levels with lines
@@ -101,15 +101,15 @@ if (is_unusual_volume_high and not na(pivot_high))
 if (is_unusual_volume_low and not na(pivot_low))
     line.new(x1=bar_index[rightLenL]+ 60, y1=pivot_low, x2=bar_index, y2=pivot_low, color=color.rgb(148, 212, 122), width=2, style=line.style_solid)
 
-labels = "LENGTH LEFT / RIGHT"
+labels = "LR labels"
 color_labal = "Text Color / Label Color"
-leftP = input.int(title="Pivot High", defval=5, minval=1, inline="Pivot High", group=labels)
-rightP = input.int(title="/", defval=5, minval=1, inline="Pivot High", group=labels)
+leftP = input.int(title="Pivot High", defval=20, minval=1, inline="Pivot High", group=labels)
+rightP = input.int(title="/", defval=20, minval=1, inline="Pivot High", group=labels)
 textColorH = input(title="Pivot High", defval=color.rgb(89, 156, 136), inline="Pivot High", group=color_labal)
 labelColor = input(title="", defval=color.rgb(89, 156, 136, 100), inline="Pivot High", group=color_labal)
 
-lpivot = input.int(title="Pivot Low", defval=5, minval=1, inline="Pivot Low", group=labels)
-rpivot = input.int(title="/", defval=5, minval=1, inline="Pivot Low", group=labels)
+lpivot = input.int(title="Pivot Low", defval=20, minval=1, inline="Pivot Low", group=labels)
+rpivot = input.int(title="/", defval=20, minval=1, inline="Pivot Low", group=labels)
 textColorL = input(title="Pivot Low", defval=color.rgb(156, 89, 89), inline="Pivot Low", group=color_labal)
 labelColorr = input(title="", defval=color.rgb(156, 89, 89,100), inline="Pivot Low", group=color_labal)
 
