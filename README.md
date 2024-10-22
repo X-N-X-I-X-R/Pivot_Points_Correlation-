@@ -99,4 +99,5 @@ If you set the following values:
 - **Volume Threshold Factor:** 1.5
 
 The script will draw pivot points that span 5 bars left and right, calculate a 10-bar moving average for volume, and flag volumes that exceed 1.5 standard deviations as "unusual."
+![Example Screenshot](./Screenshot%202024-10-22%20at%2012.58.15.png)
 
